@@ -12,10 +12,11 @@
   let total = 0;
 
   return {
+    load: load,
     add: add,
-    // subtract: subtract,
-    // multiply: multiply,
-    // divide: divide,
+    subtract: subtract,
+    multiply: multiply,
+    divide: divide,
   };
 
   /**
@@ -23,22 +24,18 @@
    * @param  { Number } x
    * @return { Number }    current total
    */
-  //  function load(x) {
-  //   if (typeof x !== 'number') {
-  //     throw new Error("Invalid entry.");
-  //   } else {
-  //     total = x;
-  //     return total;
-  //   }
-  // }
+   function load(x) {
+      total = x;
+      return total;
+  }
 
   /**
    * Return the value of `total`
    * @return { Number }
    */
-  //  function getTotal() {
-  //   return total;
-  // }
+   function getTotal() {
+    return total;
+  }
 
   /**
    * Sums the value passed in with `total`
@@ -53,69 +50,65 @@
    * Subtracts the value passed in from `total`
    * @param  { Number } x
    */
-  //  function subtract(x) {
-  //    if (typeof x !== 'number') {
-  //     throw new Error("Invalid entry.");
-  //   } else {
-  //     return total -= x;
-  //   }
-  // }
+   function subtract(x) {
+     if (typeof x !== 'number') {
+      throw new Error("Invalid entry.");
+    } else {
+      return total -= x;
+    }
+  }
 
   /**
    * Multiplies the value by `total`
    * @param  { Number } x
    */
-  //  function multiply(x) {
-  //    if (typeof x !== 'number') {
-  //     throw new Error("Invalid entry.");
-  //   } else {
-  //     return total *= x;
-  //   }
-  // }
+   function multiply(x) {
+     if (typeof x !== 'number') {
+      throw new Error("Invalid entry.");
+    } else {
+      return total *= x;
+    }
+  }
 
   /**
    * Divides the value passing in by `total`
    * @param  { Number } x
    */
-  //  function divide(x) {
-  //    if (typeof x !== 'number') {
-  //     throw new Error("Invalid entry.");
-  //   } else {
-  //     return total /= x;
-  //   }
-  // }
+   function divide(x) {
+     if (typeof x !== 'number') {
+      throw new Error("Invalid entry.");
+    } else {
+      return total /= x;
+    }
+  }
 
   /**
    * Return the value stored at `memory`
    * @return { Number }
    */
-  //  function recallMemory() {
-  //   return memory;
-  // }
+   function recallMemory() {
+    return memory;
+  }
 
   /**
    * Stores the value of `total` to `memory`
    */
-  //  function saveMemory() {
-  //   memory = total;
-  //   return memory;
-  // }
+   function saveMemory() {
+    memory = total;
+    return memory;
+  }
 
   /**
    * Clear the value stored at `memory`
    */
-  //  function clearMemory() {
-  //   memory = 0;
-  //   return memory;
-  // }
+   function clearMemory() {
+    memory = 0;
+    return memory;
+  }
 
   /**
    * Validation
    */
-  //  function validation() {
-  //   if (typeof x !== 'number') {
-  //     throw new Error("Invalid entry.");
-  //   }
-  // }
+
 
 })();
